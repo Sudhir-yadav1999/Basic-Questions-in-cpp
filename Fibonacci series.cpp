@@ -7,35 +7,23 @@ using namespace std;
 int main()
 {
 	// fibonacci series 
-	int n;
+   int n;
+   cout<<"Enter the no till which fibonacci you want to print";
+   cin>>n;
 	
-	cout<<"Enter the no till which fibonacci you want to print";
-	cin>>n;
-	int n1=0,n2=1,n3;
+   int x = 0, y = 1, z = 0;
 	
-	for(int i=0;i<=n;i++)
-	{
-		if(i==0)
-		{
-			cout<<n1<<endl;
-		}
-		else if(i==1)
-		{
-		cout<<n2<<endl;	
-		}
-		else
-		{
-			n3=n1+n2;
-			cout<<n3<<endl;
-			n1=n2;
-			n2=n3;
-		}
-	
-	
+   for (int i = 0; i < num; i++) 
+   {
+      cout << x << " ";
+      z = x + y;
+      x = y;
+      y = z;
+   }
 		
-	}
+}
 	
-	return 0;
+      return 0;
 }
 ------------------------------------------
 Recursion 
