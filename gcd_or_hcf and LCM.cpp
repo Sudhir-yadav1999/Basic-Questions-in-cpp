@@ -57,4 +57,49 @@ return (a/hcf(a,b))*b;
 }
 
 --------------------------------------------------------------------------------------
+LCM OF ARRAY OF ELEMENTS
+--------------------------------------------------------------------------------------
+ 
+#include<iostream>
 
+using namespace std;
+
+int hcf(int no1,int no2)
+{
+	if(no1==0)
+	{
+		return no2;
+	}
+	if(no2==0)
+	{
+		return no1;
+	}
+	
+	if(no1>no2)
+	{
+		return hcf(no1-no2,no2);
+	}
+	
+	
+	return hcf(no1,no2-no1);
+}
+
+int lcm1(int arr[],int n)
+{
+	int ans=arr[0];
+	for(int i=1;i<n;i++)
+	{
+		ans= ((arr[i]*ans)/hcf(arr[i],ans));
+	}
+	return ans;
+}
+
+int main()
+{
+
+	int arr[]={2,7,3,9,4};
+	int n= sizeof(arr)/sizeof(arr[0]);
+	
+	cout<<lcm1(arr,n);
+	return 0;
+}
