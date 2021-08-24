@@ -33,6 +33,51 @@ int main()
     return 0;
 }
 ------------------------------------------------------------------
+Using Map 
+
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int kthSmallest(map<int,int> mp,int k)
+{
+	int freq=0;
+	map<int,int> ::iterator it;
+	for(it=mp.begin();it!=mp.end();it++)
+	{
+	freq += (it->second); //sum of second occurance 
+	
+	if(freq >=k)
+	{
+	return it->first;	
+	}
+		
+	}
+	
+	return -1;
+	
+}
+
+
+
+int main()
+{
+  
+  int vt[]={12,3,5,7,19}; 
+  
+  int k=2;
+  
+  map<int,int> mp;
+  
+  for(int i=0;i<5;i++)
+  {
+  	mp[vt[i]]++; // m[vt[i]] +=1; // add to map
+  }
+  int ans= kthSmallest(mp,k); 
+  cout<<ans<<endl;
+    return 0;
+}
 
 
 
