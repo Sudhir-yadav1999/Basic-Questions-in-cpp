@@ -1,5 +1,5 @@
 ---------------------------------------
-K’th Smallest/Largest Element using STL
+K’th Smallest
 ---------------------------------------
 Given an array and a number k where k is smaller than size of array
 we need to find the k’th smallest element in the given array.
@@ -79,13 +79,25 @@ int main()
     return 0;
 }
 
+-----------------------------
+Largest Element using STL
+----------------------------
 
 
 
+class Solution {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+     
+    
+        sort(nums.begin(),nums.end()); //sort
+        int n=nums.size()-k;// 6-2=4 second largest element 
+        
+        return nums[n];
+    }
+};
 
-
-
-
+-------------------------------------------------------
 
 
 
